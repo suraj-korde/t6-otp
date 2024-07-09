@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("BqT6-seDU61j8p0O-");
+        })();
+    </script>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bgVideo">
+            <source src="vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <span class="error" id="fullnameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+                <button type="button" id="sendOtpBtn">Send OTP</button>
+            </div>
+            <div class="form-group" id="otpGroup" >
+                <label for="otp">OTP</label>
+                <input type="text" id="otp" name="otp">
+                <span class="error" id="otpError"></span>
+                <button type="button" id="verifyOtpBtn">Verify OTP</button>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" required>
+                <span class="error" id="mobileError"></span>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <span class="error" id="usernameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span class="error" id="passwordError"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <span class="error" id="confirmPasswordError"></span>
+            </div>
+            <button type="submit" id="submitBtn" disabled>Submit</button>
+            <p id="message"></p>
+        </form>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>
